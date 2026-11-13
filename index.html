@@ -1,111 +1,14 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#151e38">
-  <title>伊敷匠夢 | ゲームプログラマー ポートフォリオ</title>
-  <meta name="description" content="ゲームプログラマー志望・伊敷匠夢のポートフォリオ。WRECK RALLY、PLANET SHIELDと、C++ / DirectX 12による自作ゲームエンジンの実装を紹介します。">
-  <meta property="og:type" content="website"><meta property="og:title" content="伊敷匠夢 | ゲームプログラマー ポートフォリオ"><meta property="og:description" content="ゲームの楽しさを、仕組みからつくる。制作作品とC++ / DirectX 12による自作エンジンの紹介。">
-  <meta property="og:url" content="https://zinzouningen4-web.github.io/portfolio/"><meta property="og:image" content="https://zinzouningen4-web.github.io/portfolio/assets/wreck-title.webp">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portfolio.css"><script src="app.js" defer></script><script type="module" src="hero-scene.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>伊敷匠夢のポートフォリオ — 公開先を変更しました</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://kd1389274.github.io/portfolio/">
+  <meta http-equiv="refresh" content="0;url=https://kd1389274.github.io/portfolio/">
+  <script>location.replace('https://kd1389274.github.io/portfolio/' + location.hash);</script>
+  <style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#effbfe;color:#123847;font-family:system-ui,sans-serif}main{max-width:36rem;padding:2rem;line-height:1.9}h1{font-size:1.6rem}a{color:#075c77;text-underline-offset:.25em}</style>
 </head>
-<body>
-  <a class="skip" href="#works">作品紹介へスキップ</a>
-  <header class="header">
-    <a class="brand" href="#top" aria-label="伊敷匠夢 ポートフォリオ トップ">伊敷 匠夢</a>
-    <nav aria-label="メインナビゲーション"><a href="#works">作品紹介</a><a href="#engineering">自作エンジン</a><a href="#about">自己紹介</a><a href="#contact">お問い合わせ</a></nav>
-    <button class="motion-toggle" aria-pressed="false" aria-label="アニメーションを停止" title="アニメーションを停止"><span aria-hidden="true">Ⅱ</span></button>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="メニューを開く"><span></span><span></span></button>
-  </header>
-  <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション" hidden><a href="#works">作品紹介</a><a href="#engineering">自作エンジン</a><a href="#about">自己紹介</a><a href="#contact">お問い合わせ</a></nav>
-  <main>
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-light" aria-hidden="true"></div>
-      <div class="hero-layout">
-        <div class="hero-copy">
-          <p class="hero-role hero-enter">ゲームプログラマー志望</p>
-          <h1 id="hero-title"><span class="title-mask"><span>遊びの楽しさを、</span></span><span class="title-mask"><em>コードでつくる。</em></span></h1>
-          <p class="hero-description hero-enter">C++とDirectX 12で、ゲームとエンジンを開発。<br>遊びの手応えを、仕組みからつくっています。</p>
-          <p class="hero-name hero-enter">伊敷 匠夢</p>
-          <div class="hero-actions hero-enter"><a href="#works" class="primary-link">制作作品を見る <span aria-hidden="true">↗</span></a><a href="#engineering" class="text-link">自作エンジンを見る <span aria-hidden="true">→</span></a></div>
-        </div>
-        <div class="hero-world">
-          <div class="game-logo" aria-label="WRECK RALLY"><img class="logo-wreck" src="assets/ui/WreckRallyLogo_Wreck.png" alt="" width="1600" height="1036" fetchpriority="high"><img class="logo-rally" src="assets/ui/WreckRallyLogo_Rally.png" alt="" width="1600" height="1036"></div>
-          <div id="hero-scene"><img id="scene-fallback" src="assets/wreck-title.webp" alt="WRECK RALLYのオレンジの車" width="1600" height="900"><canvas id="hero-canvas" tabindex="0" role="img" aria-label="WRECK RALLYの車両3Dモデル。ドラッグまたは左右の矢印キーで回転できます。"></canvas></div>
-          <p id="scene-status" role="status">車両を準備中…</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="works section-pad" id="works" aria-labelledby="works-title">
-      <div class="container">
-        <div class="section-heading reveal"><h2 id="works-title">制作作品</h2><p>ゲームの体験と、それを支える実装を紹介します。</p></div>
-        <div class="project-directory stagger-group">
-          <a class="directory-card reveal" href="#wreck"><div class="directory-image"><img src="assets/wreck-05.webp" alt="WRECK RALLYのレース画面" width="1600" height="900" loading="lazy"></div><div><h3>WRECK RALLY</h3><p>自作エンジンによる3Dカーアクション</p></div><span aria-hidden="true">↗</span></a>
-          <a class="directory-card reveal" href="#planet"><div class="directory-image"><img src="assets/planet-04.webp" alt="PLANET SHIELDのボス戦" width="1280" height="720" loading="lazy"></div><div><h3>PLANET SHIELD</h3><p>Windows向けに公開中の2Dシューティング</p></div><span aria-hidden="true">↗</span></a>
-        </div>
-
-        <article id="wreck" class="main-project" aria-labelledby="wreck-title">
-          <div class="project-heading reveal"><h3 id="wreck-title">WRECK RALLY</h3><p>3Dカーアクション</p></div>
-          <div class="project-overview reveal">
-            <div><h4>車を操り、武器で競い、コインを集める。</h4><p>カラフルな世界を車で駆け回る3Dカーアクションです。レースに加え、武器を使いながらコインを集める「コインバトル」を制作しています。</p><p>C++とDirectX 12で描画やシーン管理の基盤をつくり、その上で車両の操作やゲームのルールを実装しています。</p><a class="text-link" href="#engineering">自作エンジンの実装を見る <span aria-hidden="true">→</span></a></div>
-            <dl class="project-facts"><div><dt>主な取り組み</dt><dd>描画基盤・車両物理・編集ツール</dd></div><div><dt>開発技術</dt><dd>C++20 / DirectX 12 / HLSL<br>Bullet Physics / Dear ImGui</dd></div><div><dt>対応環境</dt><dd>Windows</dd></div></dl>
-          </div>
-          <section class="gameplay-section reveal" aria-labelledby="wreck-video-title">
-            <div class="media-heading"><h4 id="wreck-video-title">コインバトルのプレイ動画</h4><span>約56秒</span></div>
-            <div class="video-wrapper"><video id="wreck-video" controls playsinline preload="none" poster="assets/wreck-video-poster.webp" aria-label="WRECK RALLY コインバトルのプレイ動画"><source src="assets/wreck-gameplay.mp4" type="video/mp4">お使いのブラウザは動画再生に対応していません。</video><button class="video-start" aria-label="コインバトルのプレイ動画を再生"><span class="play-icon" aria-hidden="true">▶</span></button></div>
-            <p class="media-caption">森のステージを走り、武器で攻撃しながらコインを集めるプレイの様子です。</p>
-          </section>
-          <section class="screenshots-section" aria-labelledby="wreck-screens-title">
-            <div class="media-heading reveal"><h4 id="wreck-screens-title">スクリーンショット</h4><p>画像を選ぶと拡大できます。</p></div>
-            <div class="screenshot-grid stagger-group">
-              <figure class="reveal"><button class="screenshot-button" data-wreck-image="0" aria-label="モード選択の画面を拡大"><img src="assets/wreck-01.webp" alt="WRECK RALLYのモード選択画面" width="1600" height="900" loading="lazy"></button><figcaption>モード選択</figcaption></figure>
-              <figure class="reveal"><button class="screenshot-button" data-wreck-image="1" aria-label="遊具ステージの画面を拡大"><img src="assets/wreck-02.webp" alt="青・黄・緑の遊具が並ぶステージ" width="1600" height="900" loading="lazy"></button><figcaption>遊具のあるステージ</figcaption></figure>
-              <figure class="reveal"><button class="screenshot-button" data-wreck-image="2" aria-label="コインバトルの画面を拡大"><img src="assets/wreck-03.webp" alt="黄色い地形と大きな植物に囲まれたコインバトル" width="1600" height="900" loading="lazy"></button><figcaption>コインバトル</figcaption></figure>
-              <figure class="reveal"><button class="screenshot-button" data-wreck-image="3" aria-label="武器アクションの画面を拡大"><img src="assets/wreck-04.webp" alt="武器のエフェクトが広がるコインバトル" width="1600" height="900" loading="lazy"></button><figcaption>武器を使ったアクション</figcaption></figure>
-              <figure class="reveal"><button class="screenshot-button" data-wreck-image="4" aria-label="レースの画面を拡大"><img src="assets/wreck-05.webp" alt="複数の車両が森を駆け抜けるレース" width="1600" height="900" loading="lazy"></button><figcaption>森のレース</figcaption></figure>
-              <figure class="reveal"><button class="screenshot-button" data-wreck-image="5" aria-label="タイトルの画面を拡大"><img src="assets/wreck-title.webp" alt="WRECK RALLYのタイトルとオレンジの車" width="1600" height="900" loading="lazy"></button><figcaption>タイトル画面</figcaption></figure>
-            </div>
-          </section>
-        </article>
-      </div>
-    </section>
-
-    <section class="engineering section-pad" id="engineering" aria-labelledby="engineering-title">
-      <div class="container">
-        <div class="engineering-intro reveal"><div><h2 id="engineering-title">自作ゲームエンジン</h2><p class="engine-subtitle">C++ / DirectX 12</p></div><p>描画、物理、シーン管理、編集ツールを実装。<br>WRECK RALLYの開発で必要になる機能を、エンジンの基盤から制作しています。</p></div>
-        <article class="editor-showcase" aria-labelledby="editor-title">
-          <div class="engine-block-heading reveal"><h3 id="editor-title">編集して、すぐに確認。</h3><p>配置から見た目の調整まで、一つのエディターで行えます。</p></div>
-          <figure class="engine-figure reveal"><button class="engine-image" data-engine-image="0" aria-label="自作エディターの画面を拡大"><img src="assets/engine-editor.webp" alt="自作エディターの全体画面。中央にトゥーン描画、右に階層とマテリアル設定、下にアセット、左に負荷モニターを配置" width="2555" height="1439" loading="lazy"><span class="image-action" aria-hidden="true">拡大する ↗</span></button><figcaption>自作エディターで、トゥーン描画の見た目を調整している画面。</figcaption></figure>
-          <dl class="editor-features reveal"><div><dt>シーン編集</dt><dd>階層管理と移動・回転・拡縮を実装。シーンを見ながら配置を調整できます。</dd></div><div><dt>マテリアル調整</dt><dd>トゥーンの影、輪郭、リムライトをInspectorから変更し、見た目を確認できます。</dd></div><div><dt>アセット管理</dt><dd>検索、ドラッグ操作、モデルのプレビューに対応。配置前に形状を確認できます。</dd></div><div><dt>負荷の確認</dt><dd>CPU処理の内訳やコンポーネントの更新時間を表示し、重い処理を調べられます。</dd></div></dl>
-        </article>
-        <article class="render-showcase" aria-labelledby="render-title">
-          <div class="engine-block-heading reveal"><h3 id="render-title">質感と光を、描き分ける。</h3><p>トゥーン表現に加え、金属の質感や床の映り込みを扱う描画機能も実装しています。</p></div>
-          <figure class="engine-figure reveal"><button class="engine-image" data-engine-image="1" aria-label="自作エンジンの描画例を拡大"><img src="assets/engine-render.webp" alt="自作エンジンで描画した黄色い車。車体の金属的な光沢とガレージの床への映り込み" width="2556" height="1439" loading="lazy"><span class="image-action" aria-hidden="true">拡大する ↗</span></button><figcaption>自作エンジンでの描画例。車体の質感と床の映り込み。</figcaption></figure>
-        </article>
-        <article class="ray-section" aria-labelledby="ray-title">
-          <div class="ray-heading"><h3 id="ray-title">レイトレーシングの実装</h3><p>通常の描画に、DirectX Raytracingによる反射・影・AOを組み合わせています。ピクセルシェーダーから光線を飛ばし、物体との交点をもとに描画結果を求める構成です。</p></div>
-          <dl class="ray-specs"><div><dt>実装方式</dt><dd>DXR 1.1のインラインレイトレーシングを使用。メッシュごとにBLASを構築・キャッシュし、シーン内の配置をTLASにまとめています。HLSLのRayQueryで交差判定を行います。</dd></div><div><dt>画質と負荷の調整</dt><dd>表面の粗さに応じた反射方向の計算と、過去のフレーム・周囲の画素を使う時空間デノイズを実装。解像度とレイの本数を調整できるようにしています。</dd></div><div><dt>対応範囲</dt><dd>対象は不透明でスキニングを使わないメッシュです。間接光は切り替え可能な機能として実装。DXR非対応環境では、SSRやシャドウマップを使う構成です。</dd></div></dl>
-        </article>
-        <div class="engine-systems reveal"><h3>ゲームを支える実装</h3><dl class="systems-list"><div><dt>車両物理</dt><dd>Bulletの車両物理を拡張し、Pacejkaタイヤモデルを導入。グリップや横滑り、動く地面への追従を扱っています。</dd></div><div><dt>編集・保存の共通化</dt><dd>PropertyBinderの定義をInspectorとJSONの保存・復元に共用し、編集項目と保存内容をそろえる設計です。</dd></div><div><dt>非同期読み込み</dt><dd>std::asyncでシーンデータの解析を非同期化し、データの準備とシーンの構築を分離しています。</dd></div><div><dt>ネットワーク</dt><dd>ENet / Epic Online Servicesを用いた通信処理と、車両のスナップショットから位置・回転を補間・予測する仕組みを実装しています。</dd></div><div><dt>AI・経路探索</dt><dd>Recast / DetourによるNavMeshの経路探索と、AIツリーの編集機能を実装しています。</dd></div></dl></div>
-      </div>
-    </section>
-
-    <section class="planet-section section-pad" id="planet" aria-labelledby="planet-title">
-      <div class="container">
-        <div class="planet-overview reveal"><div><h2 id="planet-title">PLANET<br><span>SHIELD</span></h2><p class="planet-status">Windows向けに公開中</p></div><div><h3>敵をかわし、機体を強化。<br>惑星を守るシューティング。</h3><p>敵ごとに異なる攻撃を避けながら、経験値によるランダムな機体強化で戦い方が変わる2Dシューティングです。</p><a class="primary-link planet-link" href="https://kobedenshigame.itch.io/planet-shield" target="_blank" rel="noopener noreferrer">itch.ioでダウンロード <span aria-hidden="true">↗</span></a></div></div>
-        <div class="planet-details reveal"><div><h4>攻撃を見極める</h4><p>3種類の敵と2種類のボス。異なる攻撃をかわし、狙いを定めます。</p></div><div><h4>経験値で機体を強化</h4><p>弾数や攻撃力、小型機などがランダムに強化されます。</p></div><div><h4>操作方法</h4><p><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 移動<br><kbd>SPACE</kbd> 射撃</p></div></div>
-        <div class="planet-media reveal"><div class="media-heading"><h3>プレイ動画</h3><span>約2分50秒</span></div><div class="video-wrapper"><video id="planet-video" controls playsinline preload="none" poster="assets/planet-01.webp" aria-label="PLANET SHIELD プレイ動画"><source src="assets/planet-gameplay.mp4" type="video/mp4">お使いのブラウザは動画再生に対応していません。</video><button class="video-start" aria-label="PLANET SHIELDのプレイ動画を再生"><span class="play-icon" aria-hidden="true">▶</span></button></div></div>
-        <div class="planet-links reveal"><a href="assets/planet-manual.pdf" class="text-link" target="_blank" rel="noopener">ゲーム説明書を読む <span aria-hidden="true">↗</span></a><a href="assets/planet-gameplay.mp4" class="text-link" download>プレイ動画をダウンロード <span aria-hidden="true">↓</span></a></div>
-      </div>
-    </section>
-    <section class="about-section section-pad" id="about" aria-labelledby="about-title"><div class="container about-layout"><div class="about-name reveal"><h2 id="about-title">自己紹介</h2><p class="profile-name">伊敷 匠夢</p><p>ゲームプログラマー志望</p></div><div class="about-copy reveal"><h3>ゲームの面白さを、<br>技術で支えたい。</h3><p>C++とDirectX 12による自作エンジンを開発し、WRECK RALLYの制作に取り組んでいます。</p><p>プレイヤーが触れるゲームの動きと、制作を支えるツールの両方に関心があります。仕組みを理解し、実装して確かめることを大切にしています。</p><dl class="about-data"><div><dt>志望職種</dt><dd>ゲームプログラマー</dd></div><div><dt>主な開発技術</dt><dd>C++ / DirectX 12 / HLSL</dd></div><div><dt>制作作品</dt><dd>WRECK RALLY / PLANET SHIELD</dd></div></dl></div></div></section>
-    <section class="contact-section section-pad" id="contact" aria-labelledby="contact-title"><div class="container reveal"><h2 id="contact-title">お問い合わせ</h2><p>作品や採用についてのご連絡は、こちらからお願いします。</p><a class="email-link" href="mailto:kd1389274@st.kobedenshi.ac.jp">kd1389274@st.kobedenshi.ac.jp <span aria-hidden="true">↗</span></a><button id="copy-email" class="copy-button">メールアドレスをコピー</button><p id="copy-status" class="copy-status" role="status"></p></div></section>
-  </main>
-  <footer><div class="container"><p>© 2026 伊敷 匠夢</p><a href="#top" aria-label="ページの先頭へ">ページの先頭へ ↑</a></div></footer>
-  <dialog id="lightbox" aria-labelledby="lightbox-caption"><div class="lightbox-toolbar"><span id="lightbox-caption"></span><a id="lightbox-original" href="assets/engine-editor.webp" target="_blank" rel="noopener">画像を別タブで開く ↗</a><button class="lightbox-close" aria-label="拡大表示を閉じる">閉じる ×</button></div><img id="lightbox-image" alt=""><div class="lightbox-controls"><button class="lightbox-prev" aria-label="前の画像">← 前の画像</button><span id="lightbox-count"></span><button class="lightbox-next" aria-label="次の画像">次の画像 →</button></div></dialog>
-</body>
+<body><main><h1>ポートフォリオの公開先を変更しました</h1><p>学校用アカウントのページへ移動します。</p><p><a href="https://kd1389274.github.io/portfolio/">伊敷匠夢のポートフォリオを見る</a></p></main></body>
 </html>
